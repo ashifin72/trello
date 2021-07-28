@@ -1,0 +1,13 @@
+{
+    "name": "AshDesks",
+    "alias": "ashdesks",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AshDesks\\Providers\\AshDesksServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

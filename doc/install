@@ -1,0 +1,32 @@
+php artisan module:make-model Desk AshDesks -m
+php artisan module:make-model DeskList AshDesks -m
+php artisan module:make-model Card AshDesks -m
+
+создаем фабрики
+php artisan module:make-factory DeskList AshDesks
+php artisan module:make-factory Card AshDesks
+php artisan module:make-factory Task AshDesks
+
+
+создаем сидеры
+
+php artisan module:make-seed seed_desk AshDesks
+php artisan module:make-seed seed_card AshDesks
+php artisan module:make-seed seed_task AshDesks
+
+ после редакции проверяем
+php artisan module:seed AshDesks
+ потом  после всех правок
+ php artisan migrate:refresh --seed
+ сщздаем контроллеры
+
+php artisan module:make-controller Api\\v1\ApiController --api AshDesks
+
+Создаем ресурсы
+php artisan module:make-resource DesksResource AshDesks
+php artisan module:make-resource DeskListResource AshDesks
+
+php artisan module:make-request DeskRequest AshDesks
+
+php artisan module:make-request
+
