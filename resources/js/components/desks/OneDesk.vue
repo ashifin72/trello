@@ -8,7 +8,9 @@
         <li class="list-group-item" v-for="list in desk_data.lists">{{list.name}}</li>
       </ul>
       <div class="card-body">
-        <router-link :to="{name: 'showdesk', params:{desk_id:desk_data.id}}" class="card-link">
+        <router-link
+          :key="desk_data.id"
+          :to="{name: 'showdesk', params:{desk_id:desk_data.id}}" class="card-link">
           Править доску
         </router-link>
         <a href="#" class="card-link">Другая ссылка</a>
@@ -17,7 +19,9 @@
 </template>
 
 <script>
+
   export default {
+
     name: "OneDesk",
     props:{
       desk_data:{
@@ -27,6 +31,7 @@
         }
       }
     }
+
   }
 </script>
 

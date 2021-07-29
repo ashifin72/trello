@@ -42,7 +42,7 @@
     },
     methods: {
       ...mapActions([
-        'GET_DESKS'
+        'GET_DESKS_FROM_API'
       ])
     },
     components: {
@@ -50,12 +50,17 @@
     },
     watch: {
       $route() {
-        this.GET_DESKS()
+
+        this.GET_DESKS_FROM_API()
+
       }
     },
     mounted() {
-      this.GET_DESKS()
+
+      this.GET_DESKS_FROM_API()
+
     }
+
   }
 </script>
 
